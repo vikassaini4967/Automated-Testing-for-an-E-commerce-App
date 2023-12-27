@@ -1,53 +1,47 @@
-Navigate to the project directory:
+ E-commerce Automation Test
 
-bash
+This repository contains a Java-based automation test script for a sample e-commerce website using Selenium WebDriver and TestNG. The test script navigates through the website, adds a specific product to the cart, and completes the checkout process.
+Prerequisites
 
-cd FantazySeleniumTest
+    Java JDK installed
+    Maven installed
+    Chrome browser installed
 
-Install project dependencies:
+Setup
 
-bash
+    Clone the repository to your local machine.
+    Open the project in your preferred Java IDE.
+    Ensure that the necessary dependencies are resolved using Maven.
 
-    mvn clean install
+Test Execution
 
-Running the Test
+    Update the productName variable in the StandAloneTest class with the desired product name.
+    Run the main method in the StandAloneTest class.
 
-    Execute the main test script:
+Description
 
-    bash
-
-    mvn exec:java -Dexec.mainClass="Fantazy.StandAloneTest"
-
-    This will launch the Chrome browser, navigate to the Fantazy website, perform the test, and close the browser.
-
-Test Description
-
-    The script logs in to the Fantazy website using predefined credentials.
-    Searches for a specific product ("ZARA COAT 3") and adds it to the cart.
-    Proceeds to the checkout and completes the order process.
-    Verifies the confirmation message.
-
-Configuration
-
-    The product name to search for is defined in the script (productName variable).
-    WebDriverManager is used to manage the ChromeDriver version.
+    The test script utilizes Selenium WebDriver for browser automation and TestNG for test management.
+    It navigates to the specified e-commerce website, logs in, searches for a product, adds it to the cart, and completes the checkout process.
+    The test uses the Page Object Model (POM) pattern, separating the page-specific actions into a separate LandingPage class.
 
 Dependencies
 
-    Selenium WebDriver
-    TestNG
-    WebDriverManager
-    Bonigarcia WebDriverManager
+    Selenium WebDriver: Manages browser automation.
+    TestNG: Manages test execution and assertions.
+    WebDriverManager: Automates the browser driver setup.
+    Boni Garcia's WebDriverManager: Simplifies WebDriver management.
 
-Additional Notes
+Project Structure
 
-    The script uses explicit waits to ensure elements are visible before interacting with them.
-    Ensure proper network connectivity and website availability during the test execution.
-    Make sure to update the login credentials if needed.
+    Fantazy package: Contains the main test script.
+    Fantazy.pageobjects: Contains the LandingPage class for page-specific actions.
 
-A
+Configuration
 
-Feel free to customize the README file based on your specific project details and requirements.
+    ChromeDriver is used by default. Ensure compatibility with your Chrome browser version.
+    The test script assumes a specific website structure. Adjust locators and wait conditions as needed.
 
+Notes
 
-
+    This script is a basic demonstration and may require modifications based on website changes or specific requirements.
+    Ensure that you have the necessary permissions to execute the test on the specified website.
